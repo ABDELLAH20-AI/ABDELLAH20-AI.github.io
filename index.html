@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdellah Ettaouil | ePortfolio</title>
+  <meta name="description" content="ePortfolio of Abdellah Ettaouil, networking student at ENSEEIHT working toward a career in ethical hacking and cybersecurity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Boot screen -->
+  <div id="boot" aria-hidden="true"><pre id="boot-text"></pre></div>
+
+  <header class="topbar">
+    <a href="#home" class="logo">root@abdellah:~$</a>
+    <button id="menu-toggle" aria-label="Toggle menu">[ menu ]</button>
+    <nav id="nav">
+      <a href="#about">./about</a>
+      <a href="#education">./education</a>
+      <a href="#skills">./skills</a>
+      <a href="#projects">./projects</a>
+      <a href="#experience">./experience</a>
+      <a href="#reflection">./reflection</a>
+      <a href="#contact">./contact</a>
+    </nav>
+  </header>
+
+  <!-- CTF challenge 3: well done for reading the source! flag{v1ew_s0urc3_1s_th3_f1rst_st3p} -->
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <p class="dim">// Career &amp; Management ePortfolio</p>
+      <h1 class="glitch" data-text="ABDELLAH">ABDELLAH</h1>
+      <p class="typed-line">&gt; <span id="typed"></span><span class="cursor">█</span></p>
+      <p class="status-line"><span class="blink-dot"></span> Looking for: a 2+ month internship from late April 2027, and a work-study contract (alternance) for 2027-2028</p>
+      <div class="hero-actions">
+        <a class="btn" href="#about">[ access profile ]</a>
+        <a class="btn btn-alt" href="#contact">[ hire me ]</a>
+        <span class="btn btn-off" title="CV coming soon">[ CV: coming soon ]</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2><span class="prompt">$</span> cat about.txt</h2>
+      <div class="window">
+        <div class="window-bar"><span></span><span></span><span></span> about.txt</div>
+        <div class="window-body">
+          <p>Hello, I'm <strong>Abdellah Ettaouil</strong>, a second-year engineering student in
+          <strong>Networks (Réseaux)</strong> at <strong>ENSEEIHT</strong>, Toulouse INP.</p>
+          <p>My goal is to become an <strong>ethical hacker</strong>: someone who finds security
+          weaknesses in networks and systems before attackers do, and helps organisations fix them.
+          I'm building that path step by step through my networking courses, hands-on labs and
+          capture-the-flag challenges.</p>
+          <p>This ePortfolio presents my studies, my first security projects, my work experience,
+          and my career plan.</p>
+          <ul class="kv">
+            <li><span>status</span>2nd-year engineering student, Networks</li>
+            <li><span>school</span>ENSEEIHT, Toulouse INP</li>
+            <li><span>location</span>Toulouse, France</li>
+            <li><span>goal</span>Ethical hacker / penetration tester</li>
+            <li><span>languages</span>Arabic, French, English, Dutch (learning)</li>
+            <li><span>looking for</span>Internship from late April 2027 (2 months min.) and an alternance for 2027-2028</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2><span class="prompt">$</span> ls ~/education</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="date">[2025] - present</div>
+          <h3>Engineering degree, Networks (Réseaux)</h3>
+          <p class="dim">ENSEEIHT, Toulouse INP</p>
+          <p>Currently in 2nd year. Main subjects: computer networks and the TCP/IP stack,
+          routing and switching, operating systems and Linux, programming, telecommunications,
+          and network security. Also following a Career &amp; Management course, for which this
+          ePortfolio was made.</p>
+        </div>
+        <div class="entry">
+          <div class="date">[2023 - 2025]</div>
+          <h3>Classes préparatoires (CPGE)</h3>
+          <p class="dim">CPGE Al Qalam</p>
+          <p>Two years of intensive preparation in mathematics, physics and computer science for
+          the competitive entrance exams to French engineering schools, which led me to ENSEEIHT.
+          This is where I built my work ethic and my problem-solving method.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2><span class="prompt">$</span> ./skills --scan</h2>
+      <div class="grid two">
+        <div class="window">
+          <div class="window-bar"><span></span><span></span><span></span> technical.log</div>
+          <div class="window-body">
+            <!-- EDIT: data-level is a percentage -->
+            <div class="skill" data-level="75"><span>Networking (TCP/IP, routing, VLANs)</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="65"><span>Linux (Kali, Ubuntu) &amp; command line</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="65"><span>Python</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="55"><span>Wireshark / Nmap</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="55"><span>C / Java / Ada</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="40"><span>Web security basics (OWASP Top 10)</span><div class="bar"><i></i></div></div>
+          </div>
+        </div>
+        <div class="window">
+          <div class="window-bar"><span></span><span></span><span></span> soft_skills.log</div>
+          <div class="window-body">
+            <div class="skill" data-level="85"><span>Rigour &amp; attention to detail</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="80"><span>Teamwork</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="80"><span>Working under time pressure</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="75"><span>Problem solving</span><div class="bar"><i></i></div></div>
+            <div class="skill" data-level="70"><span>Self-learning</span><div class="bar"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tags">
+        <span>cisco-packet-tracer</span><span>kali-linux</span><span>tryhackme</span>
+        <span>git</span><span>bash</span><span>virtualbox</span><span>python</span><span>java</span><span>c</span><span>ada</span>
+      </div>
+      <div class="window lang-window">
+        <div class="window-bar"><span></span><span></span><span></span> languages.conf</div>
+        <div class="window-body lang-grid">
+          <p><strong>Arabic</strong><br><span class="dim">native</span></p>
+          <p><strong>French</strong><br><span class="dim">fluent</span></p>
+          <p><strong>English</strong><br><span class="dim">fluent</span></p>
+          <p><strong>Dutch</strong><br><span class="dim">beginner (learning)</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2><span class="prompt">$</span> find ./projects -type f</h2>
+      <p class="dim note">// Beginner projects. Edit or remove any you haven't done yet.</p>
+      <div class="grid three">
+        <article class="card">
+          <p class="file">01_home_lab.md</p>
+          <h3>Virtual pentest home lab</h3>
+          <p>Set up a safe practice lab with VirtualBox: a Kali Linux attacker machine and a
+          deliberately vulnerable target (Metasploitable 2) on an isolated network, to practise
+          scanning and exploitation legally.</p>
+          <p class="meta">#linux #virtualisation #pentest</p>
+        </article>
+        <article class="card">
+          <p class="file">02_port_scanner.py</p>
+          <h3>Python port scanner</h3>
+          <p>Wrote a small multi-threaded TCP port scanner in Python with the socket library,
+          then compared its results with Nmap to understand how SYN and connect scans work.</p>
+          <p class="meta">#python #networking #nmap</p>
+        </article>
+        <article class="card">
+          <p class="file">03_traffic_analysis.pcap</p>
+          <h3>Network traffic analysis with Wireshark</h3>
+          <p>Captured and analysed traffic on my lab network: followed a TCP handshake, read
+          DNS and HTTP requests, and showed how passwords sent over plain HTTP or FTP can be read.</p>
+          <p class="meta">#wireshark #protocols #security</p>
+        </article>
+        <article class="card">
+          <p class="file">04_secure_network.pkt</p>
+          <h3>Secure small-business network</h3>
+          <p>Designed a small company network in Cisco Packet Tracer with VLANs per department,
+          inter-VLAN routing, ACLs to restrict access between them, and a DMZ for the web server.</p>
+          <p class="meta">#cisco #vlan #acl</p>
+        </article>
+        <article class="card">
+          <p class="file">05_ctf_writeups.md</p>
+          <h3>TryHackMe &amp; CTF write-ups</h3>
+          <p>Completing beginner rooms on TryHackMe (Pre-Security, Jr Penetration Tester path)
+          and writing short write-ups explaining each step and what I learned.</p>
+          <p class="meta">#ctf #tryhackme #learning</p>
+        </article>
+        <article class="card">
+          <p class="file">06_eportfolio.html</p>
+          <h3>This ePortfolio</h3>
+          <p>Built this terminal-themed website in HTML, CSS and JavaScript, with an interactive
+          shell, and hosted it on GitHub Pages.</p>
+          <p class="meta">#html #css #javascript</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2><span class="prompt">$</span> history | grep work</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="date">[dates]</div>
+          <h3>Order picker (Préparateur de commandes), student job</h3>
+          <p class="dim">[Company name], [city]</p>
+          <p>Prepared customer orders in a warehouse: picking items from stock, checking
+          quantities and references, packing and labelling, while meeting daily targets.</p>
+          <p>What I learned: rigour and accuracy (one wrong reference means an unhappy customer),
+          working fast under pressure, following strict procedures, and working as part of a team.
+          These are the same qualities a security professional needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section id="reflection">
+      <h2><span class="prompt">$</span> cat career_plan.txt</h2>
+      <div class="window">
+        <div class="window-bar"><span></span><span></span><span></span> career_plan.txt</div>
+        <div class="window-body">
+          <p><strong>Why cybersecurity?</strong> Studying networks showed me how much of our
+          lives depends on systems that can be attacked. I want to be on the side that protects
+          them, by thinking like an attacker to find weaknesses first.</p>
+          <p><strong>Next steps:</strong> I'm looking for an internship of at least two months
+          starting at the end of April 2027, ideally in a cybersecurity team, SOC or network
+          security role. I'm also looking for a work-study contract (alternance) for the
+          2027-2028 academic year, to combine my studies with real security work.</p>
+          <p><strong>Meanwhile:</strong> strengthen my networking and Linux foundations, keep
+          practising on TryHackMe and Root-Me, take part in CTF competitions, and keep improving
+          my English and learning Dutch.</p>
+          <p><strong>Certifications I'm aiming for:</strong> CompTIA Security+ first, then eJPT,
+          and later OSCP.</p>
+          <p><strong>Long term:</strong> work as a penetration tester or security consultant,
+          and later specialise in network security.</p>
+          <p><strong>What I've learned so far:</strong> my student job taught me rigour and
+          working under pressure, and my studies taught me how networks really work. My next
+          step is to turn that knowledge into practical security skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2><span class="prompt">$</span> ./contact --open</h2>
+      <div class="window">
+        <div class="window-bar"><span></span><span></span><span></span> contact.sh</div>
+        <div class="window-body">
+          <ul class="kv">
+            <li><span>email</span><a href="mailto:abdellahettaouil15@gmail.com">abdellahettaouil15@gmail.com</a></li>
+            <li><span>linkedin</span><a href="https://www.linkedin.com/in/abdellah-ettaouil-609459386/" target="_blank" rel="noopener">abdellah-ettaouil</a></li>
+            <li><span>github</span><a href="https://github.com/ABDELLAH20-AI" target="_blank" rel="noopener">ABDELLAH20-AI</a></li>
+            <li><span>cv</span><span class="dim nolabel">coming soon</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section id="terminal-section">
+      <h2><span class="prompt">$</span> ./terminal</h2>
+      <p class="dim">Interactive shell. Type <code>help</code> to see commands.</p>
+      <div class="window terminal" id="terminal">
+        <div class="window-bar"><span></span><span></span><span></span> bash</div>
+        <div class="window-body" id="term-out"></div>
+        <form id="term-form" class="term-input" autocomplete="off">
+          <label for="term-cmd">guest@abdellah:~$</label>
+          <input id="term-cmd" type="text" spellcheck="false" aria-label="Terminal command">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Abdellah Ettaouil · built with HTML, CSS &amp; JS · <span class="dim">connection secure</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
